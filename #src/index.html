@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport"
@@ -11,6 +11,28 @@
 <body>
 @@include('./html/_header.html')
 @@include('./html/_main.html')
+<script src="js/jquery.3.5.1.js"></script>
 <script src="js/script.min.js"></script>
+
+<script>
+    $('.card').on('click', function () {
+            $(this).toggleClass('selected');
+
+            if ($(this).hasClass('selected')) {
+                $(this).parent('.card-box').children('.card-box__link').css('display', 'none');
+                $(this).parent('.card-box').children('.card-box__descr').css('display', 'block');
+            } else {
+                $(this).parent('.card-box').children('.card-box__link').css('display', 'block');
+                $(this).parent('.card-box').children('.card-box__descr').css('display', 'none');
+            }
+            
+            if ($(this).parent('.card-box').hasClass('not-available')) {
+                $(this).parent('.card-box').children('.card-box__link').css('display', 'none');
+                $(this).parent('.card-box').children('.card-box__descr').css('display', 'none');
+            }
+        }
+    )
+
+</script>
 </body>
 </html>

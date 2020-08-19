@@ -1,0 +1,198 @@
+.card-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 100%;
+  margin-bottom: 50px;
+
+  @media (min-width: 768px) {
+    flex-basis: 50%;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: auto;
+    flex-basis: 33%;
+  }
+
+  &:first-child {
+    @media (min-width: 768px) {
+      flex-basis: 100%;
+    }
+
+    @media (min-width: 1200px) {
+      flex-basis: 33%;
+    }
+  }
+
+  & + & {
+
+    @media (min-width: 1200px) {
+      margin-left: 80px;
+    }
+  }
+
+  .card {
+    position: relative;
+    display: block;
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%, 0 11%);
+    width: 320px;
+    min-height: 480px;
+    margin-bottom: 15px;
+    padding: 16px 15px 15px 41px;
+    font-family: "Trebuchet MS", sans-serif;
+    background-color: #f2f2f2;
+    border: 4px solid #1698d9;
+    border-radius: 9px;
+    overflow: hidden;
+    transition: all .5s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 24px;
+      left: -17px;
+      width: 72px;
+      height: 4px;
+      background-color: #1698d9;
+      transform: rotate(-48deg);
+    }
+
+
+    &::after {
+      display: none;
+      position: absolute;
+      content: "";
+      top: 50px;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-color: #f2f2f2;
+      opacity: 0.6;
+    }
+
+    &__title {
+      font-size: 16px;
+      font-weight: 400;
+      color: #666666;
+      margin-bottom: 5px;
+    }
+
+    &__product-name {
+      font-family: "Trebuchet MS", sans-serif;
+      font-size: 48px;
+      font-weight: 700;
+      color: #000000;
+    }
+
+    &__descr {
+      font-size: 24px;
+      font-weight: 700;
+      color: #000000;
+      margin-bottom: 15px;
+    }
+
+    &__item {
+      font-size: 14px;
+      line-height: 16px;
+      color: #666666;
+
+      span {
+        font-weight: 700;
+      }
+    }
+
+    &__image {
+      position: absolute;
+      left: -20px;
+      bottom: -50px;
+    }
+
+    &__info {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      bottom: 10px;
+      right: 10px;
+      width: 81px;
+      height: 81px;
+      border-radius: 50%;
+      color: #ffffff;
+      background-color: #1698d9;
+
+      span:first-child {
+        font-size: 42px;
+      }
+
+      span:last-child {
+        margin-top: -8px;
+        font-size: 21px;
+      }
+    }
+  }
+
+  &__link {
+    box-shadow: 0 1px 0 1px #000000;
+    font-size: 13px;
+    line-height: 16px;
+    color: #ffffff;
+
+    a {
+      font-weight: 700;
+      color: #1698d9;
+      border-bottom: 1px dashed #1698d9;
+    }
+  }
+
+  &__link-not-available {
+    display: none;
+    font-size: 13px;
+    color: #ffff66;
+  }
+}
+
+.card-box.not-available {
+
+  .card {
+    border: 4px solid #666666;
+
+    &::before {
+      background-color: #666666;
+    }
+
+    &::after {
+      display: block;
+    }
+
+    &__info {
+      filter: grayscale(1);
+    }
+  }
+
+  .card-box__link {
+    display: none;
+  }
+
+  .card-box__link-not-available {
+    display: block;
+  }
+}
+
+.card-box:hover.available {
+  .card {
+    border: 4px solid #d91667;
+    transform: scale(1.01);
+    transition: all 0.5s;
+
+    &::before {
+      background-color: #d91667;
+    }
+
+    &__info {
+      background-color: #d91667;
+    }
+  }
+}
+

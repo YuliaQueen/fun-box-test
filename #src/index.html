@@ -15,15 +15,20 @@
 <script src="js/script.min.js"></script>
 
 <script>
+
+    $(document).on('click', '.card', function (e) {
+        e.preventDefault()
+    });
+    
     $('.card').on('click', function () {
             $(this).toggleClass('selected');
 
             if ($(this).hasClass('selected')) {
-                $(this).parent('.card-box').children('.card-box__link').css('display', 'none');
-                $(this).parent('.card-box').children('.card-box__descr').css('display', 'block');
+                $(this).parent('.card-box').children('.card-box__link').fadeToggle();
+                $(this).parent('.card-box').children('.card-box__descr').fadeToggle();
             } else {
-                $(this).parent('.card-box').children('.card-box__link').css('display', 'block');
-                $(this).parent('.card-box').children('.card-box__descr').css('display', 'none');
+                $(this).parent('.card-box').children('.card-box__link').fadeToggle();
+                $(this).parent('.card-box').children('.card-box__descr').fadeToggle();
             }
             
             if ($(this).parent('.card-box').hasClass('not-available')) {

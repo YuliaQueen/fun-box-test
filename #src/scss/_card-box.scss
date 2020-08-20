@@ -3,9 +3,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   flex-basis: 100%;
   margin-bottom: 50px;
   font-family: "Trebuchet MS", sans-serif;
+  text-align: center;
 
   @media (min-width: 768px) {
     flex-basis: 50%;
@@ -136,6 +138,8 @@
   }
 
   &__link {
+    position: absolute;
+    bottom: -5%;
     font-size: 13px;
     line-height: 16px;
     color: #ffffff;
@@ -148,9 +152,12 @@
   }
 
   &__descr {
+    position: absolute;
+    bottom: -5%;
     display: none;
-    font-size: 13px;
+    font-size: 12px;
     line-height: 16px;
+    padding: 0 5px;
     color: #ffffff;
   }
 

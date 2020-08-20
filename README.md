@@ -2,5 +2,5 @@
 Тестовое задание для FunBox
 + FlexBox
 + MobileFirst
-+ Media-query - 320px, 768px,1200px
++ Media-queries - 320px, 768px,1200px
 + Jquery для выбора карточек товара

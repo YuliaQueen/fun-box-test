@@ -59,6 +59,7 @@
       height: 4px;
       background-color: #1698d9;
       transform: rotate(-50deg);
+      transition: all .5s;
     }
 
 
@@ -176,6 +177,7 @@
 
     &::before {
       background-color: #d91667;
+      transition: all 0.5s;
     }
 
     .card__info {

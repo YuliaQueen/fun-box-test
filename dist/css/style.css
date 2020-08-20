@@ -191,6 +191,9 @@ body {
   -webkit-transform: rotate(-50deg);
       -ms-transform: rotate(-50deg);
           transform: rotate(-50deg);
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
 }
 
 .card-box .card::after {
@@ -318,6 +321,9 @@ body {
 
 .card-box.available .card.selected::before {
   background-color: #d91667;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .card-box.available .card.selected .card__info {

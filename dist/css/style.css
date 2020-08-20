@@ -293,6 +293,7 @@ body {
 
 .card-box__descr {
   position: absolute;
+  min-height: 32px;
   bottom: -5%;
   display: none;
   font-size: 12px;

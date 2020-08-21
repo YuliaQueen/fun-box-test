@@ -124,6 +124,7 @@
       border-radius: 50%;
       color: #ffffff;
       background-color: #1698d9;
+      transition: all .5s;
 
       span:first-child {
         font-size: 42px;
@@ -138,7 +139,7 @@
 
   &__link {
     position: absolute;
-    bottom: -5%;
+    bottom: -2%;
     font-size: 13px;
     line-height: 16px;
     color: #ffffff;
@@ -155,7 +156,7 @@
     min-height: 32px;
     bottom: -5%;
     display: none;
-    font-size: 12px;
+    font-size: 13px;
     line-height: 16px;
     text-align: center;
     padding: 0 5px;
@@ -182,6 +183,7 @@
 
     .card__info {
       background-color: #d91667;
+      transition: all .5s;
     }
   }
 }
